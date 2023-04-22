@@ -1,0 +1,111 @@
+<html>
+<head>
+    <title>Data Type</title>
+</head>
+<body>
+    <script>
+        let name1 = "홍길동";
+        let name2 = "홍길순";
+        //let str1 = "나의 이름은 "홍길동" 입니다."; //에러 발생
+        let str1 = "나의 이름은 '홍길동' 입니다.";
+        console.log(str1);
+
+        let str2 = "나의 이름은 \"홍길동\" 입니다."; //역슬래시 다음에 나오는 문자는 의미 X
+        console.log(str2);
+
+        let str3 = "나의 이름은 \\홍길동\\ 입니다.";
+        console.log(str3);
+
+        // Number: 숫자
+        let x1 = 3;
+        let y1 = 3.14;
+
+        // undefined
+        let u1;
+        console.log(u1); //초기화하지 않고 출력했을 때 undefined로 출력됨
+        let u2 = undefined;
+        console.log(u2);
+
+        let n1 = null;
+        console.log(n1);  //출력값: null
+        console.log(n1 + 1) //출력값: null
+
+
+        //Object : java에서 class
+        //Object 선언 후 멤버변수 초기화
+        let person1 = {}; //object 선언
+        person1.firstName = "길동"; //멤버변수 초기화
+        person1.lastName = "홍";
+        person1.age = 20;
+
+        //object 선언과 동시에 초기화
+        let person2 = {
+            firstName: "길순",
+            lastName: "홍",
+            age: 18
+        };
+
+        let person3 = {};
+        person3["firstName"] = "철수";
+        person3["lastName"] = "김";
+        person3["age"] = 18;
+
+        console.log(person1.firstName);
+
+        person2.email = "hong@gmail.com";
+
+        console.log(person2.email);
+
+        document.write(person3.firstName + "<br>");
+        document.write(person3.lastName + "<br>");
+        document.write(person3.age);
+
+        //Array(배열)
+        let car = ["현대", "기아", "볼보", "테슬라", "벤츠"];
+
+        for(var i = 0; i < car.length; i++) {
+            console.log(car[i]);
+        }
+
+        let num = [3,6,9,12,1,7];
+        console.log(num[2]);
+
+        //문자, 숫자 혼합해서 사용 가능
+        let arr1 = ["현대", 3, 3.14, undefined, null];
+
+        let arr2 = [person1, person2, person3];
+        console.log(arr2[0]);
+        console.log(arr2[1]);
+        console.log(arr2[2]);
+
+        let arr3 = []; //자바와 달리 선언만 하는 게 가능
+        arr3[0] = 1;
+        arr3[1] = "대한민국";
+
+        let arr4 = [];
+        arr4[0] = "BTS";
+        arr4.push(1); //push: 인덱스번호 필요없이 순서대로 넣음 (메소드이기 때문에 괄호 안에 넣어야 함)
+        console.log(arr4[1]);
+
+        for(var i = 0; i < arr4.length; i++) {
+            document.write(arr4[i]);
+        }
+
+        //boolean : 참 / 거짓
+        let isAdult = true;
+        let num1 = 5;
+        let num2 = 7;
+        console.log(num1 > num2);
+
+        console.log(typeof num1);
+        console.log(typeof isAdult);
+        console.log(typeof name1);
+        console.log(typeof person1);
+        console.log(typeof arr4);
+
+
+
+
+    </script>
+</body>
+</html>
