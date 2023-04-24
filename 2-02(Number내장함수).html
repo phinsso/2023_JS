@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        var x1 = 123;
+        console.log(x1);
+        console.log(x1.toString() + 1); // 숫자를 문자열로 바꿔줌 (문자열과 숫자는 더해질 수 없기에 그냥 출력됨)
+
+        // toFixed() : 지정된 소숫점 자릿수까지 반올림으로 표시
+        var x2 = 123999.562243;
+        console.log(x2.toFixed(2)); //출력값: 123999.56 (소수점 셋째 자리에서 반올림이 됨)
+
+        // toPrecision() : 정수를 포함하여 지정된 자릿수까지 반올림으로 표시
+        var x3 = 9.565;
+        console.log(x3.toPrecision(2)); // 출력값: 9.6
+
+        var x4 = Number("10"); //문자열을 숫자로 바꿔줌 <-> toString
+        console.log(x4 + 1); // 출력값: 11.1
+
+        var x5 = Number(true); // true: 1, false: 0
+        console.log(x5);
+
+        console.log(Number("      10     ")); // 공백 제거 후 숫자로 변환 (출력값: 10)
+        console.log(Number("10,33")); // 숫자로 변환할 수 없음 (출력값: NaN => Not a Number)
+        console.log(Number("10 33")); // 숫자로 변환할 수 없음 (중간의 공백은 제거 불가)
+
+        // parseInt() : 정수형으로 변환
+        console.log(parseInt("3.3")); // 출력값: 3 (소수점은 무조건 버림)
+        console.log(parseInt("10 20 30")); // 출력값: 10 (공백을 기준으로 앞의 것만 살림)
+        console.log(parseInt("18 years old")); // 출력값: 18
+
+        // parseFloat()
+        console.log(parseFloat("10")); // 출력값: 10
+        console.log(parseFloat("13.9"));
+
+    </script>
+</body>
+</html>
