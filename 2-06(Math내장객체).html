@@ -1,0 +1,85 @@
+<html>
+<head>
+    <title>Math 내장객체</title>
+</head>
+<body>
+    <script>
+
+        // Math() : 수학
+        // round() : 반올림
+        console.log(Math.round(4.6)); // 출력값: 5
+        console.log(Math.round(4.4)); // 출력값: 4
+
+
+        // ceil() : 무조건 올림
+        console.log(Math.ceil(4.9)); // 출력값: 5
+        console.log(Math.ceil(4.1)); // 출력값: 5
+        console.log(Math.ceil(4.0)); // 출력값: 4
+
+        // 게시판에 글이 총 72건
+        // 한 페이지에 보여주는 건수는 10개라고 한다면
+        // [1][2][3][4][5][6][7][8]
+        console.log(Math.ceil(72/10));
+
+        // 만약 한 페이지에 보여주는 건수를 15개로 수정
+        console.log(Math.ceil(72/15));
+
+
+        // floor() : 무조건 내림
+        console.log(Math.floor(4.9)); // 출력값: 4
+        console.log(Math.floor(-4.2)); // 출력값: -5
+
+
+        // trunc() : 정수만 리턴
+        console.log(Math.trunc(4.9)); // 출력값: 4
+        console.log(Math.trunc(-4.2)); // 출력값: -4
+
+
+        // sign() : 음수면 -1, 양수면 1, 0이면 0 리턴
+        console.log(Math.sign(-7)); // 출력값: -1;
+        console.log(Math.sign(23)); // 출력값: 1;
+        console.log(Math.sign(0)); // 출력값: 0;
+
+        
+        // pow() : 제곱
+        console.log(Math.pow(8, 2)); // 8의 2승 / 출력값: 64
+
+
+        // sqrt() : 제곱근
+        console.log(Math.sqrt(64)); // 출력값: 8
+
+
+        // abs() : 절댓값
+        console.log(Math.abs(4.7)); // 출력값: 4.7
+        console.log(Math.abs(-4.7)); // 출력값: 4.7
+
+
+        // max() : 최댓값 / min() : 최솟값
+        console.log(Math.max(0, 150, 23, 45, -28, 77)); // 출력값: 150
+        console.log(Math.min(0, 150, 23, 45, -28, 77)); // 출력값: -28
+
+
+        // random() : 난수
+        var x1 = Math.random(); // 0이상 1미만의 난수 발생
+        console.log(x1);
+
+        // 1에서 6 사이의 임의의 난수
+        var x2 = Math.trunc(Math.random() * 6) + 1; // trunc: 소수점 버림
+        console.log(x2);
+
+        var x3 = Math.floor(Math.random() * 6) + 1; // floor: 무조건 내림
+
+        //console.log("(" + x2 + ", " + x3 + ")");
+
+
+        // 임의의 정수를 생성해주는 함수 (사용자 정의 함수)
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        console.log(getRndInteger(50, 70)); // 50~70 중 임의의 난수 생성
+
+
+    </script>
+</body>
+</html>
