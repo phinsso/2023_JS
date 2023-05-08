@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        console.log("Hello World"); // 출력
+        console.info("Hello World"); // 정보
+        console.warn("Hello World"); // 주의
+        console.error("Hello World"); // 정보
+
+        var userList = [
+            {firstName: "재석", lastName: "유", email: 'yu@gmail.com'},
+            {firstName: "종국", lastName: "김", email: 'kim@gmail.com'},
+            {firstName: "세찬", lastName: "양", email: 'yang@gamil.com'},
+            {firstName: "지효", lastName: "송", email: 'song@gmail.com'}
+        ];
+        console.table(userList); // table 형태로 출력
+
+
+        // console.time();
+        // for(let x = 1; x <= 100000; x++) {
+        //     console.log(x);
+        // }
+        // console.timeEnd();
+
+        // function test() {
+        //     console.time();
+        //     // code
+        //     console.timeEnd();
+        // }
+
+
+        // 출력값에 style을 직접 지정할 수 있음
+        console.log("This is %cstyle message", "color:yellow; background-color:blue; padding:4px;");
+    </script>
+</body>
+</html>
