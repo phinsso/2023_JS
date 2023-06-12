@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(s, t) {
+            var answer = 0;
+
+            // 방법 1: for문 이용
+            for(var i of s) {
+                if(i === t) answer++;
+            }
+
+            return answer;
+
+
+            // 방법 2: split() 이용
+            answer = s.split(t).length; // answer = 4
+
+            return answer -1; 
+        }
+
+        let str = "COMPUTERPROGRAMMING";
+        console.log(solution(str, "R"));
+    </script>
+</body>
+</html>
