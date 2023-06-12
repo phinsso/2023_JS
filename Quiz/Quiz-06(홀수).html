@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>홀수 구하기</title>
+</head>
+<body>
+    <script>
+        function solution(arr) {
+            let answer = [];
+            let sum = 0;
+            let min = Number.MAX_SAFE_INTEGER;
+
+            for(let i of arr) {
+                if(arr % 2 === 1) {
+                    sum += i;
+                    if(i < min) min = x;
+                }
+            }
+
+            answer.push(sum);
+            answer.push(min);
+
+            return answer;
+        }
+
+        let arr = [12, 77, 38, 41, 53, 92, 85];
+        console.log(solution(arr));
+    </script>
+</body>
+</html>
