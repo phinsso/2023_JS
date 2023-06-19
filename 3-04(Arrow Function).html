@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function hello1() {
+            console.log("Hello World1");
+        }
+        hello1();
+
+        var hello2 = function() {
+            console.log("Hello World2");
+        }
+
+        // arrow function
+        var hello3 = () => {
+            console.log("Hello World3");
+            return "Hello World3";
+        }
+        var str = hello3();
+        console.log(str);
+
+
+        var hello4 = () => "Hello World4"; // "Hello World4" 가 return됨
+        console.log(str);
+
+
+        var hello5 = (fullName) => "Hello5" + " " + fullName; // 매개변수가 하나일 경우, fullName에 괄호 생략 가능
+        console.log(hello5("홍길동"));
+
+        var hello6 = (fullName, lastName) => "Hello6" + " " + fullName + " " + "lastName";
+        console.log(hello6("길동", "홍"));
+
+    </script>
+</body>
+</html>
