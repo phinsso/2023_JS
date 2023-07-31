@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = "";
+
+            for(let i = 0; i < str.length; i++) {
+                // indexOf는 제일 앞쪽에 있는 인덱스 하나만 리턴한다는 것을 이용
+                // i 인덱스와 str.indexOf 값이 다르면 중복되는 문자인 것
+                if(i == str.indexOf(str[i]))
+                    answer += str[i];
+            }
+
+            // 특정 문자의 갯수 출력
+            // let answer = 0;
+            // let pos = str.indexOf('k');
+
+            // while(pos != -1) {
+            //     answer++;
+            //     pos = str.indexOf("k", pos + 1);
+            // }
+
+            return answer;
+        }
+
+
+        console.log(solution("ksekkset"));
+    </script>
+</body>
+</html>
