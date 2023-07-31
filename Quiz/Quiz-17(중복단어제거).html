@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer = [];
+
+            answer = str.filter(function(v, i) {
+                // 방법 1
+                // if(str.indexOf(v) == i) {
+                //     return true;
+                // }
+                
+                // 방법 2
+                // return str.indexOf(v) === i;
+            });
+
+            // 방법 3
+            answer = str.filter((v, i) => str.indexOf(v) === i);
+
+            return answer;
+        }
+
+        let str = ["good", "time", "good", "time", "student"];
+        console.log(solution(str));
+    </script>
+</body>
+</html>
