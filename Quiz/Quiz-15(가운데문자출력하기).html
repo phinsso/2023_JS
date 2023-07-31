@@ -1,0 +1,31 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            let answer= "";
+
+            let mid = Math.floor(str.length/2); // 출력값: 2
+
+            // substring() 사용
+            // if(str.length % 2 == 1)
+            //     answer = str.substring(mid, mid + 1);
+            // else
+            //     answer = str.substring(mid - 1, mid + 1);
+
+            // substr() 사용
+            if(str.length % 2 == 1)
+                answer = str.substr(mid, 1);
+            else
+                answer = str.substr(mid - 1, 2);
+
+            return answer;
+        }
+
+        console.log(solution("study"));
+        console.log(solution("length"));
+    </script>
+</body>
+</html>
