@@ -5,41 +5,43 @@
 <body>
     <script>
         var txt = "ABCDEFGHIJKLMN";
-        console.log(txt.length);
+        console.log(txt.length); // 14
 
         // indexOf
         var str = "Please locate where 'locate'";
-        console.log(str.indexOf("locate")); //해당 단어가 위치하는 인덱스 값을 리턴함
+        console.log(str.indexOf("locate")); //해당 단어가 위치하는 인덱스 값을 리턴함 (0부터 시작)
         console.log(str.indexOf("Choi")); //단어가 없다면 -1을 리턴
         if(str.indexOf("locate") > -1) { //해당 단어가 있는지 판단하라는 뜻
             console.log("locate 문자 발견");
         }
-        console.log(str.lastIndexOf("locate")); //끝에서부터 indexOf
+
+        // lastIndexOf(): 문자열이나 배열에서 지정된 요소의 마지막으로 나타나는 인덱스를 반환
+        console.log(str.lastIndexOf("locate")); //끝에서부터 indexOf // 21
 
         // search
         console.log(str.search("locate")); //indexOf와 같은 기능 (last는 없음)
 
-        // slice
+        // slice (시작 인덱스, 글자수 - 1)
         var str = "Apple, Banana, Kiwi";
-        console.log(str.slice(7, 13)); //(시작 인덱스, 글자수(인덱스 -1))
+        console.log(str.slice(7, 13)); //(시작 인덱스, 글자수(인덱스 -1)) // Banana
         console.log(str.slice(7)); // 7번 인덱스부터 끝까지
-        console.log(str.slice(-12, -6));
-        console.log(str.slice(-2));
+        console.log(str.slice(-12, -6)); // 음수 인덱스는 문자열의 끝에서부터 역으로 세는 것을 의미하며, -1은 마지막 문자 // Banana
+        console.log(str.slice(-2)); // wi
 
-        // substring
+        // substring: 시작 인덱스에서 끝 인덱스 - 1까지를 반환 (시작 인덱스, 끝 인덱스 -1)
         var str = "Apple, Banana, Kiwi";
         console.log(str.substring(7, 13));
 
-        // substr
+        // substr: 시작인덱스부터 n개 반환 (시작 인덱스, 글자 수)
         console.log(str.substr(7, 6));
 
         var jumini = "070828";
-        console.log(jumini.substr(0, 2));
-        console.log(jumini.substr(2, 2));
-        console.log(jumini.substr(4, 2));
+        console.log(jumini.substr(0, 2)); // 07
+        console.log(jumini.substr(2, 2)); // 08
+        console.log(jumini.substr(4, 2)); // 28
 
         var jumin2 = "2007-08-28";
-        console.log(jumin2.substring(0, jumin2.indexOf("-")));
+        console.log(jumin2.substring(0, jumin2.indexOf("-"))); // (0, 4) ->  2007 (마지막 인덱스 -1이어서)
 
         // replace: 해당 단어를 찾아서 바꿈
         var str3 = "Please visit here";

@@ -21,6 +21,16 @@
 
             // 화살표함수
             sum = answer.reduce((a, b) => a + b);
+
+            for(let i = 0; i < 8; i++) {
+                for(let j = 0; j < 8; j++) {
+                    if(sum - (arr[i] + arr[j]) === 100) {
+                        // i를 먼저 삭제하면 뒷쪽 항목이 당겨지므로 다른 값이 지워짐 -> 고로, j를 먼저 지워야 함!!
+                        arr.splice(j, 1);
+                        arr.splice(i, 1);
+                    }
+                }
+            }
             return answer;
         }
 

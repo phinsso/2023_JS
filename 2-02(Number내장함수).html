@@ -12,12 +12,12 @@
         var x2 = 123999.562243;
         console.log(x2.toFixed(2)); //출력값: 123999.56 (소수점 셋째 자리에서 반올림이 됨)
 
-        // toPrecision() : 정수를 포함하여 지정된 자릿수까지 반올림으로 표시
+        // toPrecision() : 지정된 자릿수 -1까지 반올림으로 표시
         var x3 = 9.565;
         console.log(x3.toPrecision(2)); // 출력값: 9.6
 
         var x4 = Number("10"); //문자열을 숫자로 바꿔줌 <-> toString
-        console.log(x4 + 1); // 출력값: 11.1
+        console.log(x4 + 1); // 출력값: 11
 
         var x5 = Number(true); // true: 1, false: 0
         console.log(x5);
