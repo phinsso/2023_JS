@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(str) {
+            //let answer = str.toUpperCase();
+
+            // for문 이용
+            /* let answer = "";
+            for(let x of str) {
+                if(x === x.toLowerCase())
+                    answer += x.toUpperCase();
+                else
+                    answer += x;
+            }
+
+            return answer; */
+
+
+            // 방법 2: 아스키코드 이용
+            let answer = "";
+
+            for(let x of str) {
+                let num = x.charCodeAt();
+
+                if(num >= 97 && num <= 122)
+                    answer += String.fromCharCode(num - 32);
+                else
+                    answer += x;
+            }
+
+            return answer;
+        }
+
+        let str = "ItisTimeToStudy";
+        console.log(solution(str));
+    </script>
+</body>
+</html>
