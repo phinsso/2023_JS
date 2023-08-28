@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        try {
+            consol.log("Log Message");
+        } catch(err) {
+            console.log(err.name); // Reference Error
+            console.log(arr.message); // consol is not defined
+        }
+
+
+        // throw를 사용하여 강제로 에러를 발생
+        var x = "";
+        try {
+            if(x === "") throw "empty"; // x에 값이 없는 게 문법적인 에러는 아니지만
+        } catch (err) {
+            console.log(`x is ${err}`); // throw를 이용하여 강제로 에러 발생 시킴
+        } finally {
+            console.log("에러 유무와 상관없이 무조건 실행됨");
+        }
+    </script>
+</body>
+</html>
