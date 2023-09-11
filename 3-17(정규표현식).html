@@ -66,6 +66,27 @@
 
         // https://www.w3schools.com
 
+
+        // 우편번호 검색
+        var patt10 = /\d{5}/;
+        // var postalCode = "23452";  // true
+        var postalCode = "P23452";  // false
+        console.log(patt10.test(postalCode));
+
+        var patt11 = /^\d{5}/; // 숫자 다섯 개로만 이루어져야 함
+        console.log(patt11.test(postalCode));
+
+        // 핸드폰 번호 유효성 체크
+        var patt12 = /^(010)-\d{4}-\d{4}$/;
+        var tel = "010-1234-5678";
+        console.log(patt12.test(tel));
+
+        // 이메일 주소 유효성 체크
+        var patt13 = /^\w+([\.-]?\w+)*@\w+(\.\w{2,3})+$/;
+        var email = "naso01247@gmail.com";
+        console.log(patt13.test(email));
+
+
     </script>
 </body>
 </html>
