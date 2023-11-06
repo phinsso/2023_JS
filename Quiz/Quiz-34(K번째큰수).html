@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script>
+        function solution(n, k, card) {
+            let answer = 0;
+            let temp = new Set(); // Set: 중복되지 않는 유일한 값들의 집합 (중복값 제거해줌)
+            // let temp = []; 베열로 처리했을 경우
+
+            for(let i = 0; i < n-2; i++) {
+                for(let j = i+1; j < n-1; j++) {
+                    for(let k = j+1; k < n; k++) {
+                        temp.add(card[i] + card[j] + card[k]);
+                        // temp.push(card[i] = card[j] + card[k]);
+                    }
+                } 
+            }
+
+            // Array.from(): 유사 배열 객체나 반복 가능한 객체를 얕게 복사하여 새로운 Array 객체를 만드는 함수
+            let a = Array.from(temp).sort((a, b) => b - a);
+            answer = a[k -1];
+
+            return answer;
+        }
+
+        let arr = [13, 15, 34, 23, 45, 65, 33, 11, 26, 42];
+        console.log(solution(10, 3, arr));
+    </script>
+</body>
+</html>
